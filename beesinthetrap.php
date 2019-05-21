@@ -32,6 +32,8 @@ EOT;
 echo $welcomeMessage;
 echo $keepGoingMessage;
 
+$hitCount = 0;
+
 while ($hive->isAlive()) {
 
     // Keep playing!
@@ -43,12 +45,15 @@ while ($hive->isAlive()) {
 
     if ($strChar == "hit") {
         $hive->hitRandomBee();
-        $hive->getStats();
+        $hitCount++;
+        $hive->getStats(); // So we can see what's going on
         echo $keepGoingMessage;
 
     } else {
         echo $wrongInputMessage;
     }
 }
+
+echo "\nSuccess! You destroyed the hive in {$hitCount} tries. Goodbye.";
 
 fclose($resSTDIN);
