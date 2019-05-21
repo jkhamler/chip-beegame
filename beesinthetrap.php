@@ -8,7 +8,6 @@ $hive = new Hive();
 
 $hive->fill();
 
-
 $welcomeMessage = <<<EOT
 
 Welcome to the bee game. Your objective is to destroy the hive.

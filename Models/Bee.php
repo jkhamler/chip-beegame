@@ -2,6 +2,11 @@
 
 namespace Models;
 
+
+/**
+ * Class Bee
+ * @package Models
+ */
 class Bee
 {
     const BEE_TYPE_WORKER = 'WORKER';

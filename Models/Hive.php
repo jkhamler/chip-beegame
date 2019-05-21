@@ -116,5 +116,12 @@ class Hive
         }
     }
 
+    /**
+     * @return int
+     */
+    public function beeCount(){
+        return $this->bees->count();
+    }
+
 
 }
