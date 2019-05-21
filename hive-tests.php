@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 final class HiveTests extends TestCase
 {
-    public function testHiveProps(): void
+    public function testHiveBeeCount(): void
     {
         $hive = new Hive();
 
@@ -19,6 +19,10 @@ final class HiveTests extends TestCase
         $this->assertNotEquals(0, $hive->beeCount());
         $this->assertEquals(14, $hive->beeCount());
 
+        $hive->killAllBees();
+
+        $this->assertEquals(0, $hive->beeCount());
     }
+
 
 }

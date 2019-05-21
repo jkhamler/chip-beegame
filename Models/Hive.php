@@ -94,8 +94,8 @@ class Hive
         foreach ($this->bees as $bee) {
             /** @var $bee Bee */
             $bee->killBee();
-            $this->bees->detach($bee);
         }
+        $this->bees->removeAll($this->bees);
     }
 
     /**
