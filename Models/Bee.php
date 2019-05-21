@@ -26,12 +26,12 @@ class Bee
     {
         $beeTypeLabel = ucfirst(strtolower($this->type));
 
-        echo "\n\nYou took {$this->hitPoints} hit points from a {$beeTypeLabel} bee.";
+        echo "\n\nYou took {$this->hitPoints} hit points from a {$beeTypeLabel} bee.\n";
 
         if ($this->lifespan < $this->hitPoints) {
             $this->lifespan = 0; // Bee is dead.
         } else {
-            $this->lifespan .= $this->hitPoints;
+            $this->lifespan -= $this->hitPoints;
         }
 
         return $this;
